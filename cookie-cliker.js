@@ -3,7 +3,7 @@
 // @namespace   Cookie Cliker Scripts
 // @match       https://orteil.dashnet.org/cookieclicker/
 // @grant       none
-// @version     1.1
+// @version     1.2
 // @author      Artem_8086
 // @description 14.07.2020, 15:54:24
 // ==/UserScript==
@@ -16,6 +16,7 @@
 
   var timer = null
   window.enableBot = function() {
+    console.log('Clicker Bot enabled!')
     timer = setInterval(function() {
       cookie.click()
       for (var i=0, shimer; shimer=shimers.children[i]; i++) {
@@ -25,6 +26,7 @@
   }
 
   window.disableBot = function() {
+    console.log('Clicker Bot disabled!')
     if (timer != null) {
       clearInterval(timer)
       timer = null
